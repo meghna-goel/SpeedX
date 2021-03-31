@@ -7,10 +7,10 @@ import './speed.scss';
 import { api } from '../../api';
 
 import Head from '../Head';
-import Filter from './Filters';
+import Filters from './Filters';
 import Footer from './Footer';
 import Loader from '../Loader';
-import CardItem from './Card';
+import Card from './Card';
 
 const SpeedLaunch = ({history}) => {
 
@@ -75,7 +75,7 @@ const SpeedLaunch = ({history}) => {
                                 {
                                     map(filterArray, (filter,fdx) => {
                                         return(
-                                            <Filter
+                                            <Filters
                                                 key={fdx}
                                                 title={filter.title}
                                                 data={filter.data}
@@ -93,7 +93,7 @@ const SpeedLaunch = ({history}) => {
                                     {
                                         map(data,(items, idx)=>{
                                             return (
-                                                <CardItem key={idx} item={items} />
+                                                <Card key={idx} item={items} />
                                             );
                                         })
                                     }

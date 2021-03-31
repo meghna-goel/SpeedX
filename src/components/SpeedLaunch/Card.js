@@ -1,7 +1,7 @@
 import React from 'react';
 import { join } from 'lodash';
 
-const CardItem = ({item}) => {
+const Card = ({item}) => {
     const getlandSuccess = (i) => {
         return (i?.rocket?.first_stage?.cores[0])?.land_success ? 'true' : 'false';
     }
@@ -21,4 +21,4 @@ const CardItem = ({item}) => {
     )
 };
 
-export default CardItem;
+export default Card;

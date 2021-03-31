@@ -1,6 +1,6 @@
 import React from 'react';
 import { map, toLower } from 'lodash';
-const Filter = (props) => {
+const Filters = (props) => {
     const filterData = (val) => {
         if(props.filterValue === toLower(val)) val = '';
         props.onFilter(props.filterKey,toLower(val))
@@ -28,4 +28,4 @@ const Filter = (props) => {
     )
 };
 
-export default React.memo(Filter);
+export default React.memo(Filters);
